@@ -547,7 +547,7 @@
                                 <span class="transaction-value">KRISSANA VANKRUA</span>
                             </div>
                             <div class="transaction-detail">
-                                <span class="transaction-label">Account Number</span>
+                                <span class="transaction-label">PromptPay Number</span>
                                 <span class="transaction-value">080 810 6400
                                     <i class="fas fa-copy copy-icon" onclick="copyToClipboard('0808106400')" title="Copy Account Number"></i>
                                 </span>
@@ -704,7 +704,7 @@
 
         // Update transaction ID with auto-increment
         function updateTransactionID() {
-            const baseID = "PPW979105";
+            const baseID = "PB979105";
             const paddedCounter = String(transactionCounter).padStart(2, '0');
             document.getElementById('transaction-id').textContent = baseID + paddedCounter;
         }

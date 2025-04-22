@@ -421,7 +421,7 @@
 
                         <div class="mb-3">
                             <p class="text-muted mb-1" style="font-size: 0.85rem;">Account Number</p>
-                            <h4 class="card-number">080 810 6400</h4>
+                            <h4 class="card-number">137 2 96167 4</h4>
                         </div>
 
                         <div class="d-flex justify-content-between">
@@ -461,7 +461,7 @@
                             <label class="form-label text-muted" style="font-size: 0.85rem;">Account Name</label>
                             <div class="input-luxury p-2">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span style="font-size: 0.95rem;">KRISSANA  VANKRUA</span>
+                                    <span style="font-size: 0.95rem;">Krissana Vankrua</span>
                                     <span class="text-muted" style="font-size: 0.85rem;">G-WALLET</span>
                                 </div>
                             </div>
@@ -538,18 +538,18 @@
                         </div>
 
                         <div class="qr-timer" id="qr-timer">
-                            QR Code จะหมดอายุในอีก: 02:00
+                            QR Code จะหมดอายุในอีก: 01:00
                         </div>
 
                         <div class="text-start mb-3">
                             <div class="transaction-detail">
                                 <span class="transaction-label">Account Name</span>
-                                <span class="transaction-value">Krissana Vankrua</span>
+                                <span class="transaction-value">KRISSANA VANKRUA</span>
                             </div>
                             <div class="transaction-detail">
-                                <span class="transaction-label">PromptPay Number</span>
-                                <span class="transaction-value">0808106400
-                                    <i class="fas fa-copy copy-icon" onclick="copyToClipboard('0808106400')" title="Copy PromptPay Number"></i>
+                                <span class="transaction-label">Account Number</span>
+                                <span class="transaction-value">137 2 96167 4
+                                    <i class="fas fa-copy copy-icon" onclick="copyToClipboard('1372961674')" title="Copy Account Number"></i>
                                 </span>
                             </div>
                             <div class="transaction-detail">
@@ -589,7 +589,7 @@
         const phoneNumber = "0808106400"; // PromptPay number
         const FEE_AMOUNT = 0.00; // Fixed fee amount
         let qrTimer;
-        let timeLeft = 120; // 1 minute in seconds
+        let timeLeft = 60; // 1 minute in seconds
         let transactionCounter = 0; // Starting counter for transaction IDs
         
         // Initialize the app
@@ -643,7 +643,7 @@
                 });
                 Toast.fire({
                     icon: 'success',
-                    title: 'คัดลอกเบอร์พร้อมเพย์เรียบร้อยแล้ว'
+                    title: 'คัดลอกเลขบัญชีเรียบร้อยแล้ว'
                 });
             }).catch(function(err) {
                 const Toast = Swal.mixin({
@@ -824,8 +824,8 @@
         }
 
         function updateTimerDisplay() {
-            const minutes = Math.floor(timeLeft / 120);
-            const seconds = timeLeft % 120;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
             const timerDisplay = document.getElementById('qr-timer');
 
             timerDisplay.textContent = `QR Code จะหมดอายุในอีก: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;

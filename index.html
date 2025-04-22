@@ -538,18 +538,18 @@
                         </div>
 
                         <div class="qr-timer" id="qr-timer">
-                            QR Code จะหมดอายุในอีก: 01:00
+                            QR Code จะหมดอายุในอีก: 02:00
                         </div>
 
                         <div class="text-start mb-3">
                             <div class="transaction-detail">
                                 <span class="transaction-label">Account Name</span>
-                                <span class="transaction-value">Name Surname</span>
+                                <span class="transaction-value">Krissana Vankrua</span>
                             </div>
                             <div class="transaction-detail">
-                                <span class="transaction-label">Account Number</span>
+                                <span class="transaction-label">PromptPay Number</span>
                                 <span class="transaction-value">0808106400
-                                    <i class="fas fa-copy copy-icon" onclick="copyToClipboard('0808106400')" title="Copy Account Number"></i>
+                                    <i class="fas fa-copy copy-icon" onclick="copyToClipboard('0808106400')" title="Copy PromptPay Number"></i>
                                 </span>
                             </div>
                             <div class="transaction-detail">
@@ -562,7 +562,7 @@
                             </div>
                             <div class="transaction-detail">
                                 <span class="transaction-label">Transaction ID</span>
-                                <span class="transaction-value" id="transaction-id">PPW97910500</span>
+                                <span class="transaction-value" id="transaction-id">PB97910500</span>
                             </div>
                         </div>
 
@@ -824,8 +824,8 @@
         }
 
         function updateTimerDisplay() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
+            const minutes = Math.floor(timeLeft / 120);
+            const seconds = timeLeft % 120;
             const timerDisplay = document.getElementById('qr-timer');
 
             timerDisplay.textContent = `QR Code จะหมดอายุในอีก: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;

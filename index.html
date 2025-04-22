@@ -549,7 +549,7 @@
                             <div class="transaction-detail">
                                 <span class="transaction-label">Account Number</span>
                                 <span class="transaction-value">0808106400
-                                    <i class="fas fa-copy copy-icon" onclick="copyToClipboard('123456789')" title="Copy Account Number"></i>
+                                    <i class="fas fa-copy copy-icon" onclick="copyToClipboard('0808106400')" title="Copy Account Number"></i>
                                 </span>
                             </div>
                             <div class="transaction-detail">
@@ -586,10 +586,10 @@
         // Global variables
         let currentAmount = '0';
         let currentPage = 'home';
-        const phoneNumber = "1234567890"; // PromptPay number
-        const FEE_AMOUNT = 5.00; // Fixed fee amount
+        const phoneNumber = "0808106400"; // PromptPay number
+        const FEE_AMOUNT = 0.00; // Fixed fee amount
         let qrTimer;
-        let timeLeft = 60; // 1 minute in seconds
+        let timeLeft = 120; // 1 minute in seconds
         let transactionCounter = 0; // Starting counter for transaction IDs
         
         // Initialize the app
@@ -643,7 +643,7 @@
                 });
                 Toast.fire({
                     icon: 'success',
-                    title: 'คัดลอกเลขบัญชีเรียบร้อยแล้ว'
+                    title: 'คัดลอกเบอร์พร้อมเพย์เรียบร้อยแล้ว'
                 });
             }).catch(function(err) {
                 const Toast = Swal.mixin({

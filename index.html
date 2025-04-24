@@ -406,15 +406,15 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="text-center mb-4">
-                        <h1 class="luxury-text mb-2" style="font-size: 1.8rem;">Payment Online</h1>
-                        <p class="text-muted" style="font-size: 0.9rem;">ชำระค่าบริการแบบออนไลน์</p>
+                        <h1 class="luxury-text mb-2" style="font-size: 1.8rem;">ProBatt QR Payment</h1>
+                        <p class="text-muted" style="font-size: 0.9rem;">ชำระค่าบริการ ร้าน โปรแบต</p>
                     </div>
 
                     <div class="card-luxury compact-card mb-4">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
                                 <p class="text-muted mb-1" style="font-size: 0.85rem;">Account Name</p>
-                                <h3 class="luxury-text" style="font-size: 1.5rem;">KRISSANA VANKRUA</h3>
+                                <h3 class="luxury-text" style="font-size: 1.5rem;">ร้าน โปรแบต</h3>
                             </div>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" class="card-logo">
                         </div>
@@ -450,7 +450,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="header">
-                        <h2 class="luxury-text text-center mb-0" style="font-size: 1.5rem;">PAYMENT AMOUNT</h2>
+                        <h2 class="luxury-text text-center mb-0" style="font-size: 1.5rem;">จำนวนเงินที่ชำระ</h2>
                         <button class="btn btn-sm text-muted position-absolute" onclick="goBack()" style="left: 0; top: 0; font-size: 0.8rem;">
                             <i class="fas fa-arrow-left me-1"></i> BACK
                         </button>
@@ -461,14 +461,14 @@
                             <label class="form-label text-muted" style="font-size: 0.85rem;">Account Name</label>
                             <div class="input-luxury p-2">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span style="font-size: 0.95rem;">Krissana Vankrua</span>
-                                    <span class="text-muted" style="font-size: 0.85rem;">G-WALLET</span>
+                                    <span style="font-size: 0.95rem;">จ่าย นาย กฤษณะ ว. ( ร้าน โปรแบต )</span>
+                                    <span class="text-muted" style="font-size: 0.85rem;"></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label text-muted" style="font-size: 0.85rem;">Amount (THB)</label>
+                            <label class="form-label text-muted" style="font-size: 0.85rem;">Amount (บาท)</label>
                             <div class="input-luxury p-2 text-center">
                                 <div class="amount-display" id="amount-display">0.00</div>
                             </div>
@@ -518,18 +518,14 @@
                         <button class="btn btn-sm text-muted" onclick="goBack()" style="font-size: 0.8rem;">
                             <i class="fas fa-arrow-left me-1"></i> BACK
                         </button>
-                        <h2 class="luxury-text text-center mb-0" style="font-size: 1.5rem;">Screenshot and Pay</h2>
                     </div>
-
+                    
                     <div class="card-luxury p-3 text-center">
-                        <div class="success-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
                         <h3 class="luxury-text mb-3" style="font-size: 1.3rem;">ยอดชำระเงิน</h3>
 
                         <div class="mb-3">
                             <p class="text-muted mb-1" style="font-size: 0.85rem;">Amount Paid</p>
-                            <h2 id="paid-amount" class="amount-display" style="font-size: 1.8rem;">0.00 THB</h2>
+                            <h2 id="paid-amount" class="amount-display" style="font-size: 1.8rem;">0.00 บาท</h2>
                         </div>
                         <center> <img src="https://img2.pic.in.th/pic/1000008216.jpg" class="card-logo"></center>
 
@@ -544,7 +540,7 @@
                         <div class="text-start mb-3">
                             <div class="transaction-detail">
                                 <span class="transaction-label">Account Name</span>
-                                <span class="transaction-value">KRISSANA VANKRUA</span>
+                                <span class="transaction-value">MR.KRISSANA VANKRUA</span>
                             </div>
                             <div class="transaction-detail">
                                 <span class="transaction-label">PromptPay Number</span>
@@ -562,12 +558,12 @@
                             </div>
                             <div class="transaction-detail">
                                 <span class="transaction-label">Transaction ID</span>
-                                <span class="transaction-value" id="transaction-id">PB97910500</span>
+                                <span class="transaction-value" id="transaction-id">PB20256500</span>
                             </div>
                         </div>
 
                         <div class="capture-instruction">
-                            <h5 class="luxury-text">กรุณาแคปหน้าจอเพื่อชำระเงิน</h5>
+                            <h5 class="luxury-text">แคปหน้าจอ เพื่อนำไปชำระเงิน</h5>
                         </div>
                     </div>
                 </div>
@@ -643,7 +639,7 @@
                 });
                 Toast.fire({
                     icon: 'success',
-                    title: 'คัดลอกเลขบัญชีเรียบร้อยแล้ว'
+                    title: 'คัดลอกเลขพร้อมเพย์แล้ว'
                 });
             }).catch(function(err) {
                 const Toast = Swal.mixin({
@@ -704,7 +700,7 @@
 
         // Update transaction ID with auto-increment
         function updateTransactionID() {
-            const baseID = "PB979105";
+            const baseID = "PB20256500";
             const paddedCounter = String(transactionCounter).padStart(2, '0');
             document.getElementById('transaction-id').textContent = baseID + paddedCounter;
         }
